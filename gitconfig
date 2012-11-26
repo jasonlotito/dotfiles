@@ -1,20 +1,43 @@
 [user]
 	name = Jason Lotito
-	email = jasonlotito@gmail.com
+	email = jlotito@meetme.com
+  user = jlotito
 
 [alias]
   st = status
   cob = checkout -b
   co = checkout
   aa = add --all
+  br = branch
+  ci = commit
+  amend = commit --amend
+  unstage = reset HEAD
+  last = log -1 HEAD
+  revert = checkout --
+
+  # Gerrit aliases
+  gerritchanged = whatchanged remotes/gerrit/master..HEAD
+  gerritreview = push gerrit HEAD:refs/for/master
+  gerritdraft = push gerrit HEAD:refs/drafts/master
+  gchanged = whatchanged remotes/gerrit/master..HEAD
+  greview = push gerrit HEAD:refs/for/master
+  gdraft = push gerrit HEAD:refs/drafts/master
+  draft = push gerrit HEAD:refs/drafts/master
+  publish = push gerrit HEAD:refs/publish/master
   
 [color]
   status = auto
   branch = auto
   diff = auto
+  ui = auto
+
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
+
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
+
+
+# vim: set filetype=gitconfig
