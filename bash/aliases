@@ -1,10 +1,9 @@
-
-
 alias tu="top -o cpu" # cpu
 alias tm="top -o vsize"
 alias ll="ls -laGh"
 alias ..="cd .."
 alias cdd="cd -"
+alias mess="phpmd $1 text codesize,unusedcode,naming,design"
 
 # Utilities
 alias reload="source ~/bin/dotfiles/bash/aliases"
@@ -26,3 +25,31 @@ function grf() {
   rm $1
   git checkout $1
 }
+
+jspack( )
+{
+  /usr/local/bin/jsPacker.pl -i $1.unpack.js -o $1.js -s
+}
+
+jspackall( )
+{
+  for x in `ls *.unpack.js`; do time jspack `basename $x .unpack.js`; done
+}
+
+# mess filename.php
+
+csspack()
+{
+  csscompress.php $1.unpack.css > $1.css
+}
+
+go( )
+{
+  cd ~/sandbox/$1
+}
+
+pcs( )
+{
+  phpcs --standard=myYearbook $1
+}
+
