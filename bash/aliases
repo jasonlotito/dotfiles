@@ -5,6 +5,9 @@ alias ..="cd .."
 alias cdd="cd -"
 alias mess="phpmd $1 text codesize,unusedcode,naming,design"
 
+# Git Config
+alias eg="vi ~/bin/dotfiles/gitconfig"
+
 # Utilities
 alias reload="source ~/bin/dotfiles/bash/aliases"
 alias ea="vi ~/bin/dotfiles/bash/aliases && reload"
