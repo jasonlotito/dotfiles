@@ -23,6 +23,7 @@
   gdraft = push gerrit HEAD:refs/drafts/master
   draft = push gerrit HEAD:refs/drafts/master
   publish = push gerrit HEAD:refs/publish/master
+	submodules = submodule
   
 [color]
   status = auto
