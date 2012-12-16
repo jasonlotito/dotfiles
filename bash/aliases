@@ -3,7 +3,6 @@ alias tm="top -o vsize"
 alias ll="ls -laGh"
 alias ..="cd .."
 alias cdd="cd -"
-alias mess="phpmd $1 text codesize,unusedcode,naming,design"
 
 # Git Config
 alias eg="vi ~/bin/dotfiles/gitconfig"
@@ -39,7 +38,20 @@ jspackall( )
   for x in `ls *.unpack.js`; do time jspack `basename $x .unpack.js`; done
 }
 
+check( )
+{
+  echo "phpcs checking $1"
+  phpcs $1
+  echo "phpmd checking $1"
+  mess $1
+}
+
 # mess filename.php
+mess( )
+{
+  phpmd $1 text codesize,unusedcode,naming,design,controversial
+}
+
 
 csspack()
 {
