@@ -1,4 +1,8 @@
 #!/bin/sh
+# 
+# cleanup.sh
+# 
+# Author: Jason Lotito <jasonlotito@gmail.com>
 
 # Cleans up the install
 echo "Cleaning up previous *.old files"
