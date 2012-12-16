@@ -6,7 +6,7 @@
 
 # First we want to cleanup previous installs
 # They will get overwritten regardless
-./cleanup.sh
+# ./cleanup.sh
 
 # VIM
 echo "Installing ~/.vimrc"
