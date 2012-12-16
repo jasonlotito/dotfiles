@@ -1,3 +1,7 @@
+" vimrc
+" 
+" I will clean this up.
+" I will document it.
 set nocompatible
 
 " Colorscheme
@@ -6,22 +10,21 @@ syntax on
 set background=dark
 colorscheme solarized
 
-" CtrP
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-"let g:ctrlp_root_markers = ['~/Projects','~/PhpstormProjects']
-"let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files --exclude-standard -co']
-
 " Setting up Pathogen
 call pathogen#infect()
 
+" CtrP
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
 map <leader> ,
+
 filetype off
 filetype plugin indent on
 
-autocmd BufNewFile *.php 0r ~/.vim/templates/php
+" @todo Create some basic templates for files
+" autocmd BufNewFile *.php 0r ~/.vim/templates/php
 
-set modelines=0
 set backupdir=~/.tmp
 
 " Indentation 
@@ -37,7 +40,6 @@ set expandtab
 set scrolloff=8
 
 " General Config
-
 set encoding=utf-8
 set showmode
 set showcmd
@@ -49,13 +51,11 @@ set laststatus=2
 set rnu
 
 " Wild Menu
-
 set wildmenu
 set wildmode=full
 set wildignore=*.0,*.obj,*~
 
 " Search
-
 set ignorecase
 set smartcase
 set gdefault
