@@ -1,23 +1,41 @@
 #!/bin/sh
 
 # VIM
-mv ~/.vimrc ~/.vimrc.old
+if [ -f ~/.vimrc ]; then
+  mv ~/.vimrc ~/.vimrc.old
+fi
+
 ln -s ~/bin/dotfiles/vimrc ~/.vimrc
 
 # BASH
-mv ~/.bashrc ~/.bashrc.old
-mv ~/.bash_profile ~/.bash_profile.old
+if [ -f ~/.bashrc ]; then
+  mv ~/.bashrc ~/.bashrc.old
+fi
+
+if [ -f ~/.bash_profile ]; then
+  mv ~/.bash_profile ~/.bash_profile.old
+fi
+
 ln -s ~/bin/dotfiles/bashrc ~/.bashrc
 ln -s ~/bin/dotfiles/bash_profile ~/.bash_profile
 
 # GIT
-mv ~/.gitconfig ~/.gitconfig.old
-mv ~/.git ~/.git.old
+if [ -f ~/.gitconfig ]; then
+  mv ~/.gitconfig ~/.gitconfig.old
+fi
+
+if [ -d ~/.git ]; then
+  mv ~/.git ~/.git.old
+fi
+
 ln -s ~/bin/dotfiles/gitconfig ~/.gitconfig
 ln -s ~/bin/dotfiles/git ~/.git
 
 # TMUX
-mv ~/.tmux.conf ~/.tmux.conf
+if [ -f ~/.tmux.conf ]; then
+  mv ~/.tmux.conf ~/.tmux.conf.old
+fi
+
 ln -s ~/bin/dotfiles/tmux.conf ~/.tmux.conf
 
 # vcprompt

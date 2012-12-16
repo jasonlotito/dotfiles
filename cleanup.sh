@@ -2,27 +2,19 @@
 
 # Cleans up the install
 
-files = ()
-directories = ()
+files = ( '~/.vimrc.old' '~/.bashrc.old' '~/.bash_profile.old' '~/.gitconfig.old' )
+directories = ( '~/.git.old' )
 
-if [ ~f ~/.vimrc.old ]; then
-  rm ~/.vimrc.old
-fi
+for file in "${files[@]}"
+do
+  if [ -f $file ]; then
+    rm $file
+  fi
+done
 
-if [ ~f ~/.bashrc.old ]; then
-  rm ~/.bashrc.old
-fi
-
-if [ ~f ~/.bash_profile.old ]; then
-  rm ~/.bash_profile.old
-fi
-
-if [ ~f ~/.gitconfig.old ]; then
-  rm ~/.gitconfig.old
-fi
-
-if [ ~d ~/.git.old ]; then
-  rm -rf ~/.git.old
-fi
-
-
+for directory in "${directories[@]}"
+do
+  if [ -d $directory ]; then
+    rm -rf $directory
+  fi
+done
