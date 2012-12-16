@@ -16,6 +16,10 @@ mv ~/.git ~/.git.old
 ln -s ~/bin/dotfiles/gitconfig ~/.gitconfig
 ln -s ~/bin/dotfiles/git ~/.git
 
+# TMUX
+mv ~/.tmux.conf ~/.tmux.conf
+ln -s ~/bin/dotfiles/tmux.conf ~/.tmux.conf
+
 # vcprompt
 curl -sL https://github.com/djl/vcprompt/raw/master/bin/vcprompt > ~/bin/vcprompt
 chmod 755 ~/bin/vcprompt
