@@ -13,3 +13,6 @@
 [submodule "vim/bundle/snipmate"]
 	path = vim/bundle/snipmate
 	url = git://github.com/msanders/snipmate.vim.git
+[submodule "docs/tmux-colors-solarized"]
+	path = docs/tmux-colors-solarized
+	url = git://github.com/seebi/tmux-colors-solarized.git
