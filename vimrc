@@ -19,7 +19,7 @@ let g:ctrlp_cmd = 'CtrlP'
 
 map <leader> ,
 
-filetype off
+filetype on
 filetype plugin indent on
 
 " @todo Create some basic templates for files
@@ -63,18 +63,11 @@ set incsearch
 set showmatch
 set hlsearch
 
-" Display spaces, tabs
-
-"set list
-"set listchars=tab:▸\
-
 " So we move up or down on display line rather than one actual line
-
 nnoremap j gj
 nnoremap k gk
 
 " Remap ESC
-
 inoremap jj <ESC>
 
 if has("gui_running")
