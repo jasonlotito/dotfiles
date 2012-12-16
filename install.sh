@@ -1,4 +1,8 @@
 #!/bin/sh
+#
+# install.sh
+#
+# Author: Jason Lotito <jasonlotito@gmail.com>
 
 # First we want to cleanup previous installs
 # They will get overwritten regardless
