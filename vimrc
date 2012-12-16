@@ -1,6 +1,10 @@
 set nocompatible
-"colorscheme mine
+
+" Colorscheme
+let g:solarized_termcolors=256
 syntax on
+set background=dark
+colorscheme solarized
 
 " CtrP
 let g:ctrlp_map = '<c-p>'
@@ -43,7 +47,6 @@ set ruler
 set backspace=indent,eol,start
 set laststatus=2
 set rnu
-set background=dark
 
 " Wild Menu
 
