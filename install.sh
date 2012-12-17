@@ -14,7 +14,12 @@ if [ -f ~/.vimrc ]; then
   mv ~/.vimrc ~/.vimrc.old
 fi
 
+if [ -d ~/.vim ]; then
+  mv ~/.vim ~/.vim.old
+fi
+
 ln -s ~/bin/dotfiles/vimrc ~/.vimrc
+ln -s ~/bin/dotfiles/vim ~/.vim
 
 # BASH
 echo "Installing ~/.bashrc"
