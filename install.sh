@@ -10,6 +10,7 @@
 
 # VIM
 echo "Installing ~/.vimrc"
+
 if [ -f ~/.vimrc ]; then
   mv ~/.vimrc ~/.vimrc.old
 fi
@@ -24,6 +25,7 @@ ln -s ~/bin/dotfiles/vim ~/.vim
 # BASH
 echo "Installing ~/.bashrc"
 echo "Installing ~/.bash_profile"
+
 if [ -f ~/.bashrc ]; then
   mv ~/.bashrc ~/.bashrc.old
 fi
@@ -38,6 +40,7 @@ ln -s ~/bin/dotfiles/bash_profile ~/.bash_profile
 # GIT
 echo "Installing ~/.gitconfig"
 echo "Installing ~/.git"
+
 if [ -f ~/.gitconfig ]; then
   mv ~/.gitconfig ~/.gitconfig.old
 fi
@@ -55,6 +58,7 @@ ln -s ~/bin/dotfiles/git ~/.git
 
 # TMUX
 echo "Installing tmux.conf"
+
 if [ -f ~/.tmux.conf ]; then
   mv ~/.tmux.conf ~/.tmux.conf.old
 fi
@@ -65,3 +69,17 @@ ln -s ~/bin/dotfiles/tmux.conf ~/.tmux.conf
 echo "Installing vcprompot"
 curl -sL https://github.com/djl/vcprompt/raw/master/bin/vcprompt > ~/bin/vcprompt
 chmod 755 ~/bin/vcprompt
+
+# Datafiles
+echo "Installing ~/bin/data/{activity_log,daily_photo}"
+if [ -d ~/bin/data ]; then
+  mkdir ~/bin/data
+fi
+
+if [ -d ~/bin/data/activity_log ]; then
+  mkdir ~/bin/data/activity_log
+fi
+
+if [ -d ~/bin/data/daily_photo ]; then
+  mkdir ~/bin/data/daily_photo
+fi
