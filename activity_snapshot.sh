@@ -2,7 +2,7 @@
 # computer activity data collection for http://jehiah.cz/one-two/
 # by Jehiah Czebotar
  
-FILE="/Users/jasonlotito/bin/activity_log/`date +%Y%m%d`.log"
+FILE="/Users/jasonlotito/bin/data/activity_log/`date +%Y%m%d`.log"
  
 function log_activity()
 {

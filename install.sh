@@ -72,14 +72,14 @@ chmod 755 ~/bin/vcprompt
 
 # Datafiles
 echo "Installing ~/bin/data/{activity_log,daily_photo}"
-if [ -d ~/bin/data ]; then
+if [ ! -d ~/bin/data ]; then
   mkdir ~/bin/data
 fi
 
-if [ -d ~/bin/data/activity_log ]; then
+if [ ! -d ~/bin/data/activity_log ]; then
   mkdir ~/bin/data/activity_log
 fi
 
-if [ -d ~/bin/data/daily_photo ]; then
+if [ ! -d ~/bin/data/daily_photo ]; then
   mkdir ~/bin/data/daily_photo
 fi
