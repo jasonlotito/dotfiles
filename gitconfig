@@ -43,3 +43,5 @@
 	default = current
 
 # vim: set filetype=gitconfig
+[core]
+	excludesfile = /home/jlotito/.gitignore
