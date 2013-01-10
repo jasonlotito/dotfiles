@@ -24,8 +24,7 @@ filetype plugin indent on
 
 " @todo Create some basic templates for files
 " autocmd BufNewFile *.php 0r ~/.vim/templates/php
-
-set backupdir=~/.tmp
+set nobackup
 
 " Indentation 
 set autoindent
