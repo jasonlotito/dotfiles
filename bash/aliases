@@ -58,10 +58,6 @@ csspack()
   csscompress.php $1.unpack.css > $1.css
 }
 
-go( )
-{
-  cd ~/sandbox/$1
-}
 
 pcs( )
 {
