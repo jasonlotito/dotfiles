@@ -49,6 +49,8 @@ set ruler
 set backspace=indent,eol,start
 set laststatus=2
 set rnu
+set modeline
+set modelines=1
 
 " Wild Menu
 set wildmenu

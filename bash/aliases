@@ -1,3 +1,4 @@
+# vim: set syn=sh:
 alias tu="top -o cpu" # cpu
 alias tm="top -o vsize"
 alias ll="ls -laGh"
