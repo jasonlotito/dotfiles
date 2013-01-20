@@ -83,3 +83,5 @@ fi
 if [ ! -d ~/bin/data/daily_photo ]; then
   mkdir ~/bin/data/daily_photo
 fi
+
+git submodule init && git submodule update
