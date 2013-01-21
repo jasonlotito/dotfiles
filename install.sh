@@ -84,4 +84,15 @@ if [ ! -d ~/bin/data/daily_photo ]; then
   mkdir ~/bin/data/daily_photo
 fi
 
+echo "Installing submodules"
 git submodule init && git submodule update
+
+echo "Aliases being set inclue setting TERM to xterm-256color"
+
+read -n1 -p "Install pip? Needs root. [y,N]: " doit
+case $doit in
+  y|Y) echo "" && echo "Installing pip" \
+    && curl -O https://raw.github.com/pypa/pip/master/contrib/get-pip.py \
+    && sudo python get-pip.py;;
+  *) echo "" && echo "Not installing";;
+esac
