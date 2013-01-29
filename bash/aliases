@@ -2,7 +2,9 @@
 alias tu="top -o cpu" # cpu
 alias tm="top -o vsize"
 alias ll="ls -laGh"
+alias l="clear && pwd && ls -FGl"
 alias ..="cd .."
+alias u=".. && l"
 alias cdd="cd -"
 
 # Git Config

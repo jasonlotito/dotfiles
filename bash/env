@@ -1,6 +1,6 @@
 export EDITOR="vim"
 
-export PATH=~/bin:$PATH
+export PATH=~/bin:/usr/local/share/npm/bin:$PATH
 
 # Prefer US English and use UTF-8
 export LC_ALL="en_US.UTF-8"
