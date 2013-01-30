@@ -17,3 +17,9 @@ $ ./cleanup.sh
 </code>
 
 This will cleanup (delete) all the files we moved in the install.sh file.  Be warned!
+
+## Notes
+
+Macfusion setup under SSH Advanced needs the following settings:
+
+-o idmap=user -o uid=501

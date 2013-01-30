@@ -56,6 +56,31 @@ fi
 ln -s ~/bin/dotfiles/gitconfig ~/.gitconfig
 ln -s ~/bin/dotfiles/git ~/.git
 
+# REPO and REPOSYNC
+echo "Installing repo via brew"
+BREW_INSTALLED=1
+brew install repo 2>/dev/null || { 
+  echo >&2 "I require brew but it's not installed.  Aborting.";
+  BREW_INSTALLED=0;
+
+  read -n1 -p "Install brew? [y,N]: " installBrew
+
+  case $installBrew in
+    y|Y) echo "Installing brew." \
+      && ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"
+      && brew install repo
+      && BREW_INSTALLED=1;;
+    *) echo "Not installing brew.";;
+  esac
+}
+
+if [ $BREW_INSTALLED -eq 1 ]; then
+  echo "Installing reposync into ~/bin"
+  if [ ! -f ~/bin/reposync ]; then 
+    ln -s ~/bin/dotfiles/reposync ~/bin/reposync
+  fi
+fi
+
 # TMUX
 echo "Installing tmux.conf"
 
