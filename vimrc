@@ -24,8 +24,7 @@ filetype plugin indent on
 
 " @todo Create some basic templates for files
 " autocmd BufNewFile *.php 0r ~/.vim/templates/php
-
-set backupdir=~/.tmp
+set nobackup
 
 " Indentation 
 set autoindent
@@ -49,6 +48,8 @@ set ruler
 set backspace=indent,eol,start
 set laststatus=2
 set rnu
+set modeline
+set modelines=1
 
 " Wild Menu
 set wildmenu

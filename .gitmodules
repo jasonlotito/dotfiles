@@ -16,3 +16,6 @@
 [submodule "docs/tmux-colors-solarized"]
 	path = docs/tmux-colors-solarized
 	url = git://github.com/seebi/tmux-colors-solarized.git
+[submodule "reposync"]
+	path = reposync
+	url = git@github.meetmecorp.com:jlotito/reposync.git

@@ -1,7 +1,10 @@
+# vim: set syn=sh:
 alias tu="top -o cpu" # cpu
 alias tm="top -o vsize"
 alias ll="ls -laGh"
+alias l="clear && pwd && ls -FGl"
 alias ..="cd .."
+alias u=".. && l"
 alias cdd="cd -"
 
 # Git Config
@@ -58,10 +61,6 @@ csspack()
   csscompress.php $1.unpack.css > $1.css
 }
 
-go( )
-{
-  cd ~/sandbox/$1
-}
 
 pcs( )
 {
