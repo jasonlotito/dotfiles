@@ -1,6 +1,6 @@
 export EDITOR="vim"
-
-export PATH=~/bin:/usr/local/share/npm/bin:$PATH
+export MARKPATH=$HOME/.marks
+export PATH=~/bin:/usr/local/Cellar/php55/5.5.1/bin:/usr/local/share/npm/bin:/usr/local/sbin:$PATH
 
 # Prefer US English and use UTF-8
 export LC_ALL="en_US.UTF-8"

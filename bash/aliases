@@ -15,55 +15,15 @@ alias reload="source ~/bin/dotfiles/bash/aliases"
 alias ea="vi ~/bin/dotfiles/bash/aliases && reload"
 alias ee="vi ~/bin/dotfiles/bash/env"
 
-function take {
-  mkdir $1
-  cd $1
+function jump { 
+      cd -P $MARKPATH/$1 2>/dev/null || echo "No such mark: $1"
 }
-
-function gbt() {
-  git branch --track $2 $1/$2
-  git checkout $2
+function mark { 
+      mkdir -p $MARKPATH; ln -s $(pwd) $MARKPATH/$1
 }
-
-# git-remove-file
-function grf() {
-  rm $1
-  git checkout $1
+function unmark { 
+      rm -i $MARKPATH/$1 
 }
-
-jspack( )
-{
-  /usr/local/bin/jsPacker.pl -i $1.unpack.js -o $1.js -s
+function marks {
+      ls -l $MARKPATH | sed 's/  / /g' | cut -d' ' -f9- | sed 's/ -/\t-/g' && echo
 }
-
-jspackall( )
-{
-  for x in `ls *.unpack.js`; do time jspack `basename $x .unpack.js`; done
-}
-
-check( )
-{
-  echo "phpcs checking $1"
-  phpcs $1
-  echo "phpmd checking $1"
-  mess $1
-}
-
-# mess filename.php
-mess( )
-{
-  phpmd $1 text codesize,unusedcode,naming,design,controversial
-}
-
-
-csspack()
-{
-  csscompress.php $1.unpack.css > $1.css
-}
-
-
-pcs( )
-{
-  phpcs --standard=myYearbook $1
-}
-
