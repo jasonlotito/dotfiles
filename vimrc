@@ -13,6 +13,9 @@ colorscheme solarized
 " Setting up Pathogen
 call pathogen#infect()
 
+" Setting up Powerlines
+" let g:Powerline_symbols = 'fancy'
+
 " CtrP
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
