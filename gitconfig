@@ -1,6 +1,6 @@
 [user]
-  name = Jason Lotito
-  email = jasonlotito@gmail.com
+	name = Jason Lotito
+	email = jlotito@meetme.com
 
 [alias]
   st = status
@@ -13,6 +13,8 @@
   unstage = reset HEAD
   last = log -1 HEAD
   revert = checkout --
+  fall = fetch --all
+  pmm = pull main master
 
   # Gerrit aliases
   gerritchanged = whatchanged remotes/gerrit/master..HEAD
@@ -23,6 +25,7 @@
   gdraft = push gerrit HEAD:refs/drafts/master
   draft = push gerrit HEAD:refs/drafts/master
   publish = push gerrit HEAD:refs/publish/master
+  prodpublish = push gerrit HEAD:refs/publish/production
 	submodules = submodule
   
 [color]
@@ -35,13 +38,15 @@
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
 
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
-
 [push]
 	default = current
 
 # vim: set filetype=gitconfig
 [core]
-	excludesfile = /home/jlotito/.gitignore
+	excludesfile = /Users/jasonlotito/.gitignore
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f

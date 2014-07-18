@@ -6,6 +6,8 @@ alias l="clear && pwd && ls -FGl"
 alias ..="cd .."
 alias u=".. && l"
 alias cdd="cd -"
+# Yeah, often enough
+alias gti="git"
 
 # Git Config
 alias eg="vi ~/bin/dotfiles/gitconfig"
@@ -14,16 +16,38 @@ alias eg="vi ~/bin/dotfiles/gitconfig"
 alias reload="source ~/bin/dotfiles/bash/aliases"
 alias ea="vi ~/bin/dotfiles/bash/aliases && reload"
 alias ee="vi ~/bin/dotfiles/bash/env"
+alias wsend='/Users/jasonlotito/.wsend/wsend'
 
 function jump { 
       cd -P $MARKPATH/$1 2>/dev/null || echo "No such mark: $1"
 }
+
 function mark { 
       mkdir -p $MARKPATH; ln -s $(pwd) $MARKPATH/$1
 }
+
 function unmark { 
       rm -i $MARKPATH/$1 
 }
+
 function marks {
       ls -l $MARKPATH | sed 's/  / /g' | cut -d' ' -f9- | sed 's/ -/\t-/g' && echo
+}
+
+NORMAL=$(tput sgr0)
+GREEN=$(tput setaf 2; tput bold)
+YELLOW=$(tput setaf 3)
+RED=$(tput setaf 1)
+
+# red "Say somehting here"
+function red() {
+    echo -e "$RED$*$NORMAL"
+}
+
+function green() {
+    echo -e "$GREEN$*$NORMAL"
+}
+
+function yellow() {
+    echo -e "$YELLOW$*$NORMAL"
 }

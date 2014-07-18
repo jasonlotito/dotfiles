@@ -81,6 +81,12 @@ if [ $BREW_INSTALLED -eq 1 ]; then
   fi
 fi
 
+if [ $BREW_INSTALLED -eq 1]; then
+  echo "Installing brew packages"
+  brew install tree
+  brew install bash-completion
+fi
+
 # TMUX
 echo "Installing tmux.conf"
 

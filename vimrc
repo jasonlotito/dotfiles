@@ -14,13 +14,13 @@ colorscheme solarized
 call pathogen#infect()
 
 " Setting up Powerlines
-" let g:Powerline_symbols = 'fancy'
+"let g:Powerline_symbols = 'fancy'
 
 " CtrP
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
-map <leader> ,
+let mapleader = ","
 
 filetype on
 filetype plugin indent on
@@ -28,6 +28,9 @@ filetype plugin indent on
 " @todo Create some basic templates for files
 " autocmd BufNewFile *.php 0r ~/.vim/templates/php
 set nobackup
+
+set exrc                  " per-dir .vimrc
+set secure
 
 " Indentation 
 set autoindent

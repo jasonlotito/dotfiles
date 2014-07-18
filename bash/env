@@ -1,6 +1,9 @@
 export EDITOR="vim"
 export MARKPATH=$HOME/.marks
-export PATH=~/bin:/usr/local/Cellar/php55/5.5.1/bin:/usr/local/share/npm/bin:/usr/local/sbin:$PATH
+export PATH=~/bin:/usr/local/php5/bin:/usr/local/sbin:/usr/local/share/npm/bin:/usr/local/bin:$PATH
+export GOROOT=/usr/local/go
+export PATH=$PATH:$GOROOT/bin
+export DOCKER_HOST=tcp://localhost:4243
 
 # Prefer US English and use UTF-8
 export LC_ALL="en_US.UTF-8"
