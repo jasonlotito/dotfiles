@@ -8,6 +8,10 @@ alias u=".. && l"
 alias cdd="cd -"
 # Yeah, often enough
 alias gti="git"
+alias ls='ls -F --color=always'
+alias grep='grep --color=auto -in'
+alias mv='mv -iv'
+
 
 # Git Config
 alias eg="vi ~/bin/dotfiles/gitconfig"
